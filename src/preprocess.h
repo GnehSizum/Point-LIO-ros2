@@ -1,4 +1,3 @@
-// 已更改
 #pragma once
 
 #include <rclcpp/rclcpp.hpp>
@@ -142,7 +141,7 @@ class Preprocess
   int lidar_type, point_filter_num, N_SCANS, SCAN_RATE, time_unit;
   double blind;
   bool given_offset_time;
-  // 没找到这三东西在哪用了 于是注释
+
   // ros::Publisher pub_full, pub_surf, pub_corn;
     
 

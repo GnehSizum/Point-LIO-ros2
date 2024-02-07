@@ -1,20 +1,15 @@
 import os.path
-
 from ament_index_python.packages import get_package_share_directory
-
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument
 from launch.substitutions import LaunchConfiguration, Command
 from launch.conditions import IfCondition
-
 from launch_ros.actions import Node
 
 
 def generate_launch_description():
     package_path = get_package_share_directory('point_lio')
     default_config_path = os.path.join(package_path, 'config', 'mid360.yaml')
-    # default_rviz_config_path = os.path.join(
-    #     package_path, 'rviz', 'fastlio.rviz')
     xacro_path = os.path.join(package_path, 'config', 'robot.urdf.xacro')
     use_sim_time = LaunchConfiguration('use_sim_time')
     config_path = LaunchConfiguration('config_path')

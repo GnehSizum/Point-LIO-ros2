@@ -1,4 +1,3 @@
-// 已更改
 #include "preprocess.h"
 
 #define RETURN0     0x00
